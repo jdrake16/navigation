@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.navigation;
 
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -58,5 +59,9 @@ public class SecondFragment extends Fragment {
       Bundle savedInstanceState) {
     // Inflate the layout for this fragment
     return inflater.inflate(R.layout.fragment_second, container, false);
+  }
+
+  public interface OnFragmentInteractionListener {
+    void onFragmentInteraction(Uri uri);
   }
 }

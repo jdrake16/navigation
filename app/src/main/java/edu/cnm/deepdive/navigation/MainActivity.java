@@ -1,16 +1,29 @@
 package edu.cnm.deepdive.navigation;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import edu.cnm.deepdive.navigation.ui.main.MainFragment;
+import android.net.Uri;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity implements
+    SecondFragment.OnFragmentInteractionListener {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.main_activity);
 
-    }
   }
+
+  @Override
+  public void onFragmentInteraction(Uri uri) {
+
+  }
+
+
+
+
+}
 
