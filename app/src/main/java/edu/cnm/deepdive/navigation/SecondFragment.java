@@ -2,6 +2,7 @@ package edu.cnm.deepdive.navigation;
 
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -64,4 +65,17 @@ public class SecondFragment extends Fragment {
   public interface OnFragmentInteractionListener {
     void onFragmentInteraction(Uri uri);
   }
+
+  @Override
+  public void onStart() {
+    super.onStart();
+
+    TextView argText = getView().findViewById(R.id.argText);
+
+    SecondFragmentArgs args = SecondFragmentArgs.fromBundle(getArguments());
+
+    String message = args.getMessage();
+    argText.setText(message);
+  }
+
 }
